@@ -1,8 +1,8 @@
-import { createClient } from '@supabase/supabase-js'
-import type { Database } from './database.types'
+import { createClient } from "@supabase/supabase-js";
+import type { Database } from "./database.types";
 
 export const supabase = createClient<Database>(
-  import.meta.env.VITE_SUPABASE_URL,
-  import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
-  { auth: { flowType: 'pkce' } },
-)
+  import.meta.env.SUPABASE_URL,
+  import.meta.env.SUPABASE_PUBLISHABLE_KEY,
+  { auth: { flowType: "pkce" } },
+);
